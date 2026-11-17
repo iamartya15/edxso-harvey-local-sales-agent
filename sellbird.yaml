@@ -1,0 +1,260 @@
+persona:
+  name: "Alex"
+  company: "Your Company"
+  role: "Business Development"
+  email: "alex@yourcompany.com"
+  linkedin: "linkedin.com/in/alex-yourcompany"
+  tone: "professional, consultative, confident"
+
+# EDXSO fork: local-only brain. Ollama on localhost, model qwen3:0.6b.
+# No Claude/Codex subscription, no API key, no cloud fallback.
+brain:
+  provider: ollama
+  model: qwen3:0.6b
+  ollama_host: "http://localhost:11434"
+  ollama_model: qwen3:0.6b
+
+# EDXSO fork: multi-product catalogue. `product:` (first entry) is kept as
+# the legacy default; `products:` is the full list, each with its own ICP.
+# Sample products mirror data/seed_sample_data.json (fictional, for demo).
+product:
+  id: school-erp
+  name: "VidyaSetu School ERP"
+  description: "School management software for K-12 schools: admissions, attendance, fees, exams, timetable and parent app in one place."
+  pricing: "Rs.4,999/month per school (up to 500 students); Rs.9,999/month above that"
+  key_benefits:
+    - "Fee collection and receipts without spreadsheets"
+    - "Attendance and timetable in under 5 minutes a day"
+    - "Parent app with homework, notices and fee reminders"
+  objection_responses:
+    "too expensive": "Most schools recover the fee from one month of on-time fee collection; we can start with a single branch on the Rs.4,999 plan."
+    "already have a solution": "Understood — which part takes your staff the most time today? We usually replace just that module first."
+    "not interested": "No problem. Would a 10-minute look at the fee-collection screen be useful, or should I check back next term?"
+  offer:
+    primary: "Rs.4,999/month per school"
+    entry: "14-day free trial with your real timetable imported"
+    goal: "book_call"
+    booking_method: "suggest_times"
+    booking_url: ""
+    meeting_duration: "20 minutes"
+    meeting_owner: ""
+  icp:
+    industries: ["K-12 School", "Education"]
+    company_size: "20-200 staff"
+    titles: ["Principal", "Director", "Administrator", "Head of Administration"]
+    geography: ["Uttar Pradesh", "India"]
+    hiring_signals: ["Admission Counsellor", "Front Office Executive", "Accountant"]
+
+products:
+  - id: school-erp
+    name: "VidyaSetu School ERP"
+    description: "School management software for K-12 schools: admissions, attendance, fees, exams, timetable and parent app in one place."
+    pricing: "Rs.4,999/month per school (up to 500 students); Rs.9,999/month above that"
+    key_benefits:
+      - "Fee collection and receipts without spreadsheets"
+      - "Attendance and timetable in under 5 minutes a day"
+      - "Parent app with homework, notices and fee reminders"
+    objection_responses:
+      "too expensive": "Most schools recover the fee from one month of on-time fee collection; we can start with a single branch on the Rs.4,999 plan."
+      "already have a solution": "Understood — which part takes your staff the most time today? We usually replace just that module first."
+      "not interested": "No problem. Would a 10-minute look at the fee-collection screen be useful, or should I check back next term?"
+    offer:
+      primary: "Rs.4,999/month per school"
+      entry: "14-day free trial with your real timetable imported"
+      goal: "book_call"
+      booking_method: "suggest_times"
+      meeting_duration: "20 minutes"
+    icp:
+      industries: ["K-12 School", "Education"]
+      company_size: "20-200 staff"
+      titles: ["Principal", "Director", "Administrator", "Head of Administration"]
+      geography: ["Uttar Pradesh", "India"]
+      hiring_signals: ["Admission Counsellor", "Front Office Executive", "Accountant"]
+  - id: coaching-booking
+    name: "ClassBook Coaching Suite"
+    description: "Booking and batch-management software for tuition and coaching centres: online batch booking, fee reminders and test scheduling."
+    pricing: "Rs.2,499/month per centre; Rs.1,999/month per additional branch"
+    key_benefits:
+      - "Students book batches and demo classes online, 24x7"
+      - "Automatic fee reminders cut follow-up calls by half"
+      - "Test schedules and results shared to parents instantly"
+    objection_responses:
+      "too expensive": "One filled batch from online bookings usually covers 3 months of the plan; the first month is a free trial."
+      "already have a solution": "Fair — do your students book demo classes online today, or does your front desk handle every enquiry by phone?"
+      "not interested": "Understood. If demo-class bookings ever pile up on the front desk, the trial is there — shall I leave the link?"
+    offer:
+      primary: "Rs.2,499/month per centre"
+      entry: "Free trial for one batch"
+      goal: "start_trial"
+      booking_method: "suggest_times"
+      meeting_duration: "15 minutes"
+    icp:
+      industries: ["Coaching Centre", "Tuition Centre", "Education"]
+      company_size: "5-50 staff"
+      titles: ["Owner", "Director", "Centre Head", "Academic Head"]
+      geography: ["Uttar Pradesh", "India"]
+      hiring_signals: ["Faculty", "Receptionist", "Counsellor"]
+  - id: college-attendance
+    name: "CampusTrack Attendance & Payroll"
+    description: "Attendance and payroll SaaS for small colleges: biometric/QR attendance, leave, salary slips and statutory reports."
+    pricing: "Rs.149 per employee/month; Rs.99 per employee/month above 100 staff"
+    key_benefits:
+      - "Payroll-ready attendance without manual registers"
+      - "Leave approvals on mobile for faculty and staff"
+      - "Salary slips and PF/ESI-ready reports in one click"
+    objection_responses:
+      "too expensive": "At Rs.149 per employee it is usually cheaper than the hours your office spends on registers each month — we can price it on your actual headcount."
+      "already have a solution": "Makes sense — does your current setup produce payroll-ready attendance, or does someone re-enter it every month?"
+      "not interested": "No worries. If payroll month ever gets painful, a 15-minute demo on your own attendance data is one call away."
+    offer:
+      primary: "Rs.149 per employee/month"
+      entry: "Free pilot for one department"
+      goal: "book_call"
+      booking_method: "suggest_times"
+      meeting_duration: "20 minutes"
+    icp:
+      industries: ["College", "Higher Education"]
+      company_size: "50-500 staff"
+      titles: ["Registrar", "Principal", "HR Manager", "Administrative Officer"]
+      geography: ["Uttar Pradesh", "India"]
+      hiring_signals: ["HR Executive", "Accountant", "Office Assistant"]
+
+icp:
+  industries:
+    - "K-12 School"
+    - "Education"
+  company_size: "20-200 staff"
+  titles:
+    - "Principal"
+    - "Director"
+    - "Administrator"
+    - "Head of Administration"
+  geography:
+    - "Uttar Pradesh"
+    - "India"
+  # Roles that signal a company is in-market RIGHT NOW (a company hiring a
+  # "Head of Growth" is shopping for growth tooling). Used for careers-page
+  # scanning and job-board discovery. Empty = fall back to titles above.
+  hiring_signals: []
+
+channels:
+  email:
+    enabled: true
+    provider: "gmail"          # gmail (recommended) | microsoft | smtp | instantly
+    max_daily_sends: 50
+    require_approval: true      # native: review in Outbox; Instantly: sending held
+    # link_domains: ["mainsite.com"]   # your own sites besides the sending
+    #                                  # domain and booking link; on autopilot,
+    #                                  # an email linking elsewhere waits for you
+    # phone_numbers: ["+1 555 010 2000"]  # your own numbers; on autopilot, an
+    #                                  # email giving any other number waits for you
+    send_to_risky: false        # also send to catch-all domains (off = safest)
+    # min_write_score: 60       # only write for prospects Scout scored at
+    #                           # least this (0-100); 0 or unset = everyone
+    max_bounce_rate: 0.05       # pause all sending if bounces exceed this
+    # New sending domain? Set start_date to the day your warmup service went
+    # on: no cold email for min_days, then the cold cap climbs from
+    # start_sends by daily_increase a day up to max_daily_sends. Replies are
+    # never held. Gmail/Microsoft/SMTP only (Instantly has its own warmup).
+    # Check readiness any time with `sellbird warmup`.
+    # We recommend TrulyInbox for warmup: https://trulyinbox.com/?via=sellbird
+    # Connect it (`sellbird trulyinbox connect`) and `sellbird warmup` reads
+    # whether this mailbox is actually warmed.
+    warmup:
+      start_date: ""            # YYYY-MM-DD; blank = no ramp
+      min_days: 14
+      start_sends: 5
+      daily_increase: 3
+      dkim_selector: ""         # only if your provider uses an unusual one
+    # Send cold email only in office hours in each recipient's own time zone,
+    # worked out from the company's location or the country Precleared finds.
+    # Anyone Sellbird can't place gets the window in usage.quiet_hours.timezone.
+    # Follow-ups move into the window; replies are never held. Quiet hours
+    # then stop prospecting and writing, not mail that's due.
+    # Gmail/Microsoft/SMTP only. Remove the # marks to switch it on.
+    # send_window:
+    #   start: "08:00"
+    #   end: "17:00"
+    #   weekdays_only: true      # Monday to Friday, in every country
+    #   recipient_timezone: true  # false: one zone for everyone (quiet_hours.timezone)
+    # A logo under every email, cold or reply: the email goes out as HTML
+    # with the image embedded. Blank logo = plain text, as before. If the
+    # file can't be used, approved email waits instead of going out without
+    # it. Gmail/Microsoft/SMTP only.
+    # Plain text usually lands better for cold email: images and HTML can push
+    # a new mailbox toward spam. Warm up first, and test placement after adding it.
+    signature:
+      logo: ""                  # PNG/JPEG/GIF up to 100 KB, e.g. "data/assets/logo.png"
+      width: 120                # display width in pixels
+      alt: ""                   # text when images are off; blank = persona.company
+      link: ""                  # optional web address the logo opens
+      direction: "auto"         # rtl for Hebrew or Arabic email
+  linkedin:
+    enabled: false             # explicit opt-in; credentials alone do not enable it
+    max_daily_connections: 20
+    max_daily_messages: 10
+
+usage:
+  max_daily_claude_percent: 80
+  heartbeat_interval_minutes: 15
+  quiet_hours:
+    start: "22:00"
+    end: "07:00"
+    timezone: "America/New_York"
+
+# Optional: check each new recipient with Precleared (precleared.dev) before
+# the first cold email: may cold marketing email go to this address under the
+# rules of the recipient's country (UK PECR, US CAN-SPAM, Canada's CASL,
+# Germany's UWG, France's CPCE and the rest of Precleared's fourteen)? Any other
+# answer holds the email back, with the reason in the Outbox. One check per
+# address; 10 a day free without a key. A free key (PRECLEARED_API_KEY in .env,
+# which `sellbird precleared-key` gets for you) allows 100 a day for its first 14
+# days, then 25. Applies to the native providers (gmail, microsoft, smtp). If all
+# your prospects are in one country, set prospect_country: Precleared uses it
+# only when it can't tell the country from the address, company records or the
+# company's website.
+compliance:
+  # Added under every cold email (never replies). US law (CAN-SPAM) requires a
+  # postal address you receive mail at: a street address, PO box or virtual
+  # mailbox. Until it's set, cold email still sends, with a warning.
+  postal_address: ""
+  # Any wording works: Sellbird reads every reply for a request to stop.
+  opt_out_line: "Not interested? Just let me know and I won't email you again."
+  # Never email these, cold or in reply: competitors, your existing customers,
+  # anyone under a legal hold. An entry is an address or a domain, and a domain
+  # covers its subdomains ("acme.example" also blocks "mail.acme.example", but
+  # not "notacme.example"). Checked by the gate at send time, so it holds even
+  # for an email you already approved in the Outbox, and picked up by a running
+  # Sellbird at once. If you trained Sellbird, set it in sellbird.local.yaml instead:
+  # that file wins.
+  do_not_contact: []
+  #   - "competitor.example"
+  #   - "jane@acme.example"
+  precleared:
+    enabled: false
+    sender_country: ""          # where your business is based: GB, US, CA, DE, FR, AU,
+                                # IE, NL, ES, IT, LV, AE, EG or QA
+    address_source: "unknown"   # published | bought | scraped | given | unknown
+    prospect_country: ""        # optional, e.g. US if all your prospects are in one country
+    # Sellbird also tells Precleared the recipient's country when the company's
+    # location makes it certain, and the company's and person's names when
+    # it has them (see docs/precleared.md).
+
+# Optional: your own rules for the emails Sellbird drafts (length, structure,
+# what to say about the product, links, subject lines, sign-off), as a
+# markdown file. When set they replace the built-in shape (email 1 under 75
+# words, an observation and a question, no pitch). The send gate still holds
+# every email to 220 words and one link. skills/email_rules.md is gitignored.
+# writer:
+#   email_rules: "skills/email_rules.md"
+
+# When someone says yes to your offer, hand them to the system that delivers it:
+# one tool on its MCP server. See sellbird/handoff.py. Leave it out to handle it yourself.
+# handoff:
+#   mcp_url: https://example.com/mcp
+#   token_env: EXAMPLE_MCP_TOKEN          # the .env variable holding its bearer token
+#   tool: create_site
+#   arguments:
+#     company: "{company}"
+#     website: "{website}"
+#     email: "{email}"

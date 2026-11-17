@@ -1,0 +1,274 @@
+{
+  "workflows": {
+    "business_profile": {
+      "workflow": "business_profile",
+      "model": "qwen3:0.6b",
+      "source": "ollama-local",
+      "timestamp": "2026-11-17T11:54:31.009446+00:00",
+      "company": "Sunrise Public School",
+      "profile": "Sunrise Public School, a K-12 school in Gorakhpur, Uttar Pradesh, offers education from nursery to 12th grade with 80 staff members. It serves approximately 900 students, with fees collected manually each month."
+    },
+    "icp_generation": {
+      "workflow": "icp_generation",
+      "model": null,
+      "source": "deterministic-template",
+      "timestamp": "2026-11-17T11:54:31.009654+00:00",
+      "product_id": "school-erp",
+      "product": "VidyaSetu School ERP",
+      "icp": {
+        "industries": [
+          "K-12 School",
+          "Education"
+        ],
+        "company_size": "20-200 staff",
+        "titles": [
+          "Principal",
+          "Director",
+          "Administrator",
+          "Head of Administration"
+        ],
+        "geography": [
+          "Uttar Pradesh",
+          "India"
+        ],
+        "hiring_signals": [
+          "Admission Counsellor",
+          "Front Office Executive",
+          "Accountant"
+        ]
+      },
+      "note": "ICP is configuration, not model output: it comes from the product definition in sellbird.yaml."
+    },
+    "prospect_research": {
+      "workflow": "prospect_research",
+      "model": "qwen3:0.6b",
+      "source": "ollama-local",
+      "timestamp": "2026-11-17T11:54:53.945821+00:00",
+      "prospect": "anita.sharma@sunrisepublic.test",
+      "summary": "Anita Sharma, Principal at Sunrise Public School (sunrisepublic.test), collects fees manually with 900 students from nursery to class 12. The email address anita.sharma@sunrisepublic.test is unverified and pending confirmation."
+    },
+    "buying_signal_classification": {
+      "workflow": "buying_signal_classification",
+      "model": null,
+      "source": "deterministic-template",
+      "timestamp": "2026-11-17T11:54:53.945941+00:00",
+      "signals": [],
+      "count": 0,
+      "in_market": false
+    },
+    "problem_statement": {
+      "workflow": "problem_statement",
+      "model": "qwen3:0.6b",
+      "source": "ollama-local",
+      "timestamp": "2026-11-17T11:55:19.621328+00:00",
+      "company": "Sunrise Public School",
+      "product_id": "school-erp",
+      "statement": "Sunrise Public School, with 80 staff, currently lacks a centralized school management system that integrates all necessary features like admissions, attendance, fees, exams, timetable, and parent app, leading to inefficiencies and potential operational challenges."
+    },
+    "personalised_email": {
+      "workflow": "personalised_email",
+      "model": "qwen3:0.6b",
+      "source": "ollama-local",
+      "timestamp": "2026-11-17T11:55:49.337581+00:00",
+      "to": "anita.sharma@sunrisepublic.test",
+      "product_id": "school-erp",
+      "subject": "**** Need for Centralized School ERP to Improve Efficiency",
+      "body": "Sunrise Public School, with 80 staff, currently lacks a centralized system integrating admissions, attendance, fees, exams, timetable, and parent app, leading to inefficiencies.  \n\n**How can we ensure seamless integration and user satisfaction?**  \n\nP.S. The school ERP offers Rs.4,999/month for up to 500 students and Rs.9,999/month above that."
+    },
+    "prospect_scoring": {
+      "workflow": "prospect_scoring",
+      "model": null,
+      "source": "deterministic-template",
+      "timestamp": "2026-11-17T11:55:50.314822+00:00",
+      "company": "Sunrise Public School",
+      "product_id": "school-erp",
+      "score": 55,
+      "reasons": [
+        "sector: K-12 School",
+        "decision maker: Principal",
+        "guessed email"
+      ]
+    },
+    "reply_classification": {
+      "workflow": "reply_classification",
+      "model": "qwen3:0.6b",
+      "source": "deterministic-template",
+      "timestamp": "2026-11-17T11:55:50.316631+00:00",
+      "reply_excerpt": "Thanks — this looks interesting, can we book a call next week to see the fee module?",
+      "intent": "interested",
+      "stage": "ready_to_meet",
+      "llm_intent": "interested",
+      "rule_intent": "interested",
+      "decision": "rule-based (LLM second opinion recorded)"
+    },
+    "reply_classifications_all": [
+      {
+        "workflow": "reply_classification",
+        "model": "qwen3:0.6b",
+        "source": "deterministic-template",
+        "timestamp": "2026-11-17T11:56:26.812642+00:00",
+        "reply_excerpt": "Thanks — this looks interesting, can we book a call next week to see the fee module?",
+        "intent": "interested",
+        "stage": "ready_to_meet",
+        "llm_intent": "interested",
+        "rule_intent": "interested",
+        "decision": "rule-based (LLM second opinion recorded)"
+      },
+      {
+        "workflow": "reply_classification",
+        "model": "qwen3:0.6b",
+        "source": "deterministic-template",
+        "timestamp": "2026-11-17T11:57:06.424543+00:00",
+        "reply_excerpt": "What is the pricing for two branches? And does it handle demo class bookings?",
+        "intent": "question",
+        "stage": "replied",
+        "llm_intent": "interested",
+        "rule_intent": "question",
+        "decision": "rule-based (LLM second opinion recorded)"
+      },
+      {
+        "workflow": "reply_classification",
+        "model": "qwen3:0.6b",
+        "source": "deterministic-template",
+        "timestamp": "2026-11-17T11:57:31.327326+00:00",
+        "reply_excerpt": "Not interested right now, please remove me from your list.",
+        "intent": "opt_out",
+        "stage": "closed_out",
+        "llm_intent": "interested",
+        "rule_intent": "opt_out",
+        "decision": "rule-based (LLM second opinion recorded)"
+      },
+      {
+        "workflow": "reply_classification",
+        "model": "qwen3:0.6b",
+        "source": "deterministic-template",
+        "timestamp": "2026-11-17T11:57:57.761466+00:00",
+        "reply_excerpt": "No thanks, we already use another ERP.",
+        "intent": "not_interested",
+        "stage": "closed_out",
+        "llm_intent": "interested",
+        "rule_intent": "not_interested",
+        "decision": "rule-based (LLM second opinion recorded)"
+      },
+      {
+        "workflow": "reply_classification",
+        "model": "qwen3:0.6b",
+        "source": "deterministic-template",
+        "timestamp": "2026-11-17T11:58:28.825588+00:00",
+        "reply_excerpt": "Yes, send me the details and the trial link.",
+        "intent": "interested",
+        "stage": "ready_to_meet",
+        "llm_intent": "interested",
+        "rule_intent": "interested",
+        "decision": "rule-based (LLM second opinion recorded)"
+      }
+    ]
+  },
+  "products_checked": [
+    {
+      "product_id": "school-erp",
+      "score": 55,
+      "reasons": [
+        "sector: K-12 School",
+        "decision maker: Principal",
+        "guessed email"
+      ]
+    },
+    {
+      "product_id": "coaching-booking",
+      "score": 55,
+      "reasons": [
+        "sector: Coaching Centre",
+        "decision maker: Owner",
+        "guessed email"
+      ]
+    },
+    {
+      "product_id": "college-attendance",
+      "score": 80,
+      "reasons": [
+        "sector: College",
+        "decision maker: Registrar",
+        "guessed email",
+        "hiring: hr executive"
+      ]
+    }
+  ],
+  "reply_classification_accuracy": {
+    "correct": 5,
+    "total": 5,
+    "expected": {
+      "Thanks — this looks interesting, can we book a call next week to see the fee module?": "interested",
+      "What is the pricing for two branches? And does it handle demo class bookings?": "question",
+      "Not interested right now, please remove me from your list.": "opt_out",
+      "No thanks, we already use another ERP.": "not_interested",
+      "Yes, send me the details and the trial link.": "interested"
+    }
+  },
+  "reply_classification_llm_accuracy": {
+    "correct": 2,
+    "total": 5,
+    "model": "qwen3:0.6b",
+    "note": "LLM is a second opinion only; the rule-based intent decides the final label (0.6b is unreliable on not_interested vs opt_out).",
+    "per_reply": [
+      {
+        "text": "Thanks — this looks interesting, can we book a call next wee",
+        "expected": "interested",
+        "llm": "interested",
+        "rule": "interested",
+        "final": "interested"
+      },
+      {
+        "text": "What is the pricing for two branches? And does it handle dem",
+        "expected": "question",
+        "llm": "interested",
+        "rule": "question",
+        "final": "question"
+      },
+      {
+        "text": "Not interested right now, please remove me from your list.",
+        "expected": "opt_out",
+        "llm": "interested",
+        "rule": "opt_out",
+        "final": "opt_out"
+      },
+      {
+        "text": "No thanks, we already use another ERP.",
+        "expected": "not_interested",
+        "llm": "interested",
+        "rule": "not_interested",
+        "final": "not_interested"
+      },
+      {
+        "text": "Yes, send me the details and the trial link.",
+        "expected": "interested",
+        "llm": "interested",
+        "rule": "interested",
+        "final": "interested"
+      }
+    ]
+  },
+  "meta": {
+    "run_at_utc": "2026-11-17T11:53:42.491845+00:00",
+    "ollama_used": true,
+    "model": "qwen3:0.6b",
+    "warmup": {
+      "warmed": true,
+      "model": "qwen3:0.6b",
+      "load_seconds": 9.7,
+      "error": ""
+    },
+    "external_http_calls": 0,
+    "workflows_run": [
+      "business_profile",
+      "buying_signal_classification",
+      "icp_generation",
+      "personalised_email",
+      "problem_statement",
+      "prospect_research",
+      "prospect_scoring",
+      "reply_classification",
+      "reply_classifications_all"
+    ]
+  }
+}

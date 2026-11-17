@@ -1,0 +1,12 @@
+=== grep paid APIs in fork code ===
+NO MATCHES
+
+=== paid-service keys anywhere in fork files ===
+.env.example:9:# ZeroBounce, Hunter, DataForSEO, Serper, Scavio, Cloudflare, TrulyInbox,
+sellbird.yaml:160:    # We recommend TrulyInbox for warmup: https://trulyinbox.com/?via=sellbird
+sellbird.yaml:161:    # Connect it (`sellbird trulyinbox connect`) and `sellbird warmup` reads
+sellbird.yaml:210:# address; 10 a day free without a key. A free key (PRECLEARED_API_KEY in .env,
+
+NOTE: the 3 "paid-service" hits above are COMMENTS ONLY (in .env.example
+explaining the removal, and in upstream sellbird.yaml comments). No key,
+no credential, no call: grep for actual assignments/calls returns nothing.

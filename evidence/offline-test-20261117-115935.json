@@ -1,0 +1,208 @@
+{
+  "workflows": {
+    "business_profile": {
+      "workflow": "business_profile",
+      "model": null,
+      "source": "deterministic-template",
+      "timestamp": "2026-11-17T11:59:34.929656+00:00",
+      "company": "Sunrise Public School",
+      "profile": "Sunrise Public School is a 80 staff K-12 School based in Gorakhpur, Uttar Pradesh. K-12 school, nursery to Class 12, ~900 students; fees collected manually each month. [Deterministic template — Ollama was unavailable, so no model wrote this.]"
+    },
+    "icp_generation": {
+      "workflow": "icp_generation",
+      "model": null,
+      "source": "deterministic-template",
+      "timestamp": "2026-11-17T11:59:34.930207+00:00",
+      "product_id": "school-erp",
+      "product": "VidyaSetu School ERP",
+      "icp": {
+        "industries": [
+          "K-12 School",
+          "Education"
+        ],
+        "company_size": "20-200 staff",
+        "titles": [
+          "Principal",
+          "Director",
+          "Administrator",
+          "Head of Administration"
+        ],
+        "geography": [
+          "Uttar Pradesh",
+          "India"
+        ],
+        "hiring_signals": [
+          "Admission Counsellor",
+          "Front Office Executive",
+          "Accountant"
+        ]
+      },
+      "note": "ICP is configuration, not model output: it comes from the product definition in sellbird.yaml."
+    },
+    "prospect_research": {
+      "workflow": "prospect_research",
+      "model": null,
+      "source": "deterministic-template",
+      "timestamp": "2026-11-17T11:59:34.930369+00:00",
+      "prospect": "anita.sharma@sunrisepublic.test",
+      "summary": "Prospect: Anita Sharma — Principal at Sunrise Public School (sunrisepublic.test). Stored notes: School collects fees manually; 900 students across nursery to Class 12.. Email: anita.sharma@sunrisepublic.test (status: guess — unverified addresses are never sent to). [Deterministic template — no model used.]"
+    },
+    "buying_signal_classification": {
+      "workflow": "buying_signal_classification",
+      "model": null,
+      "source": "deterministic-template",
+      "timestamp": "2026-11-17T11:59:34.930474+00:00",
+      "signals": [],
+      "count": 0,
+      "in_market": false
+    },
+    "problem_statement": {
+      "workflow": "problem_statement",
+      "model": null,
+      "source": "deterministic-template",
+      "timestamp": "2026-11-17T11:59:34.930578+00:00",
+      "company": "Sunrise Public School",
+      "product_id": "school-erp",
+      "statement": "Sunrise Public School is a 80 staff K-12 School showing: no buying signals stored. VidyaSetu School ERP addresses this by fee collection and receipts without spreadsheets. [Deterministic template — Ollama was unavailable.]"
+    },
+    "personalised_email": {
+      "workflow": "personalised_email",
+      "model": null,
+      "source": "deterministic-template",
+      "timestamp": "2026-11-17T11:59:34.930673+00:00",
+      "to": "anita.sharma@sunrisepublic.test",
+      "product_id": "school-erp",
+      "subject": "Quick question about Sunrise Public School",
+      "body": "Hi Anita,\n\nSunrise Public School is a 80 staff K-12 School showing: no buying signals stored. VidyaSetu School ERP addresses this by fee collection and receipts without spreadsheets. [Deterministic template — Ollama was unavailable.]\n\nVidyaSetu School ERP helps K-12 School with fee collection and receipts without spreadsheets, attendance and timetable in under 5 minutes a day. Rs.4,999/month per school (up to 500 students); Rs.9,999/month above that — would a 15-minute look be useful?\n\nBest regards\n[Deterministic template — Ollama was unavailable; review before sending.]"
+    },
+    "prospect_scoring": {
+      "workflow": "prospect_scoring",
+      "model": null,
+      "source": "deterministic-template",
+      "timestamp": "2026-11-17T11:59:35.041233+00:00",
+      "company": "Sunrise Public School",
+      "product_id": "school-erp",
+      "score": 55,
+      "reasons": [
+        "sector: K-12 School",
+        "decision maker: Principal",
+        "guessed email"
+      ]
+    },
+    "reply_classification": {
+      "workflow": "reply_classification",
+      "model": null,
+      "source": "deterministic-template",
+      "timestamp": "2026-11-17T11:59:35.041397+00:00",
+      "reply_excerpt": "Thanks — this looks interesting, can we book a call next week to see the fee module?",
+      "intent": "interested",
+      "stage": "ready_to_meet"
+    },
+    "reply_classifications_all": [
+      {
+        "workflow": "reply_classification",
+        "model": null,
+        "source": "deterministic-template",
+        "timestamp": "2026-11-17T11:59:35.041522+00:00",
+        "reply_excerpt": "Thanks — this looks interesting, can we book a call next week to see the fee module?",
+        "intent": "interested",
+        "stage": "ready_to_meet"
+      },
+      {
+        "workflow": "reply_classification",
+        "model": null,
+        "source": "deterministic-template",
+        "timestamp": "2026-11-17T11:59:35.041633+00:00",
+        "reply_excerpt": "What is the pricing for two branches? And does it handle demo class bookings?",
+        "intent": "question",
+        "stage": "replied"
+      },
+      {
+        "workflow": "reply_classification",
+        "model": null,
+        "source": "deterministic-template",
+        "timestamp": "2026-11-17T11:59:35.041763+00:00",
+        "reply_excerpt": "Not interested right now, please remove me from your list.",
+        "intent": "opt_out",
+        "stage": "closed_out"
+      },
+      {
+        "workflow": "reply_classification",
+        "model": null,
+        "source": "deterministic-template",
+        "timestamp": "2026-11-17T11:59:35.041868+00:00",
+        "reply_excerpt": "No thanks, we already use another ERP.",
+        "intent": "not_interested",
+        "stage": "closed_out"
+      },
+      {
+        "workflow": "reply_classification",
+        "model": null,
+        "source": "deterministic-template",
+        "timestamp": "2026-11-17T11:59:35.041955+00:00",
+        "reply_excerpt": "Yes, send me the details and the trial link.",
+        "intent": "interested",
+        "stage": "ready_to_meet"
+      }
+    ]
+  },
+  "products_checked": [
+    {
+      "product_id": "school-erp",
+      "score": 55,
+      "reasons": [
+        "sector: K-12 School",
+        "decision maker: Principal",
+        "guessed email"
+      ]
+    },
+    {
+      "product_id": "coaching-booking",
+      "score": 55,
+      "reasons": [
+        "sector: Coaching Centre",
+        "decision maker: Owner",
+        "guessed email"
+      ]
+    },
+    {
+      "product_id": "college-attendance",
+      "score": 80,
+      "reasons": [
+        "sector: College",
+        "decision maker: Registrar",
+        "guessed email",
+        "hiring: hr executive"
+      ]
+    }
+  ],
+  "reply_classification_accuracy": {
+    "correct": 5,
+    "total": 5,
+    "expected": {
+      "Thanks — this looks interesting, can we book a call next week to see the fee module?": "interested",
+      "What is the pricing for two branches? And does it handle demo class bookings?": "question",
+      "Not interested right now, please remove me from your list.": "opt_out",
+      "No thanks, we already use another ERP.": "not_interested",
+      "Yes, send me the details and the trial link.": "interested"
+    }
+  },
+  "meta": {
+    "run_at_utc": "2026-11-17T11:59:34.756544+00:00",
+    "ollama_used": false,
+    "model": null,
+    "warmup": null,
+    "external_http_calls": 0,
+    "workflows_run": [
+      "business_profile",
+      "buying_signal_classification",
+      "icp_generation",
+      "personalised_email",
+      "problem_statement",
+      "prospect_research",
+      "prospect_scoring",
+      "reply_classification",
+      "reply_classifications_all"
+    ]
+  }
+}
